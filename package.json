@@ -1,0 +1,32 @@
+{
+    "name": "enci-scrape",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "This is an example of a Crawlee project.",
+    "dependencies": {
+        "crawlee": "^3.0.0",
+        "fs": "^0.0.1-security",
+        "json2csv": "^6.0.0-alpha.2",
+        "playwright": "^1.38.1",
+        "playwright-extra": "^4.3.6",
+        "playwright-extra-plugin-stealth": "^0.0.1",
+        "puppeteer-extra-plugin-stealth": "^2.11.2"
+    },
+    "devDependencies": {
+        "@apify/tsconfig": "^0.1.0",
+        "@types/json2csv": "^5.0.4",
+        "@types/node": "^18.0.0",
+        "ts-node": "^10.8.0",
+        "typescript": "^5.0.0"
+    },
+    "scripts": {
+        "start": "npm run start:dev",
+        "start:prod": "node dist/main.js",
+        "start:dev": "node --no-warnings=ExperimentalWarning --loader ts-node/esm/transpile-only src/main.ts",
+        "build": "tsc",
+        "test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1",
+        "csv":"node src/jsontocsv.cjs"
+    },
+    "author": "It's not you it's me",
+    "license": "ISC"
+}
